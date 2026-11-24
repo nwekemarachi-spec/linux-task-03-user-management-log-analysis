@@ -1,0 +1,20 @@
+2026-11-24 08:00:01 INFO System started by root
+2026-11-24 08:03:12 INFO user01 logged in
+2026-11-24 08:05:44 WARNING Failed login attempt
+2026-11-24 08:07:09 ERROR Wrong password entered
+2026-11-24 08:10:30 INFO root checked system status
+2026-11-24 08:12:18 WARNING Disk space is getting low
+2026-11-24 08:15:02 ERROR SSH service failed
+2026-11-24 08:18:27 INFO user01 opened a session
+2026-11-24 08:20:51 INFO Backup started by root
+2026-11-24 08:23:16 WARNING Unusual activity detected
+2026-11-24 08:25:39 ERROR Permission denied
+2026-11-24 08:28:04 INFO user01 closed an application
+2026-11-24 08:30:22 INFO root updated the system
+2026-11-24 08:33:47 WARNING Network connection is slow
+2026-11-24 08:36:11 ERROR Database connection failed
+2026-11-24 08:39:55 INFO System monitoring started
+2026-11-24 08:42:08 WARNING Storage almost full
+2026-11-24 08:45:33 INFO user01 requested a report
+2026-11-24 08:48:19 ERROR Unauthorized access detected
+2026-11-24 08:51:40 INFO root completed maintenance

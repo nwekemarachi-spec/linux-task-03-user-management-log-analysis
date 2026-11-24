@@ -1,0 +1,10 @@
+# Temporary/editor files
+*~
+*.swp
+*.tmp
+.DS_Store
+
+# Keep folder placeholders, but ignore accidental secret files
+.env
+*.key
+*.pem

@@ -1,0 +1,38 @@
+    1  mkdir /home/forensic01/log
+    2  cd /home/forensic01/log
+    3  echo "2026-11-24 08:00:01 INFO System started by root\n2026-11-24 08:03:12 INFO user01 logged in\n2026-11-24 08:05:44 WARNING Failed login attempt\n2026-11-24 08:07:09 ERROR Wrong password entered\n2026-11-24 08:10:30 INFO root checked system status\n2026-11-24 08:12:18 WARNING Disk space is getting low\n2026-11-24 08:15:02 ERROR SSH service failed\n2026-11-24 08:18:27 INFO user01 opened a session\n2026-11-24 08:20:51 INFO Backup started by root\n2026-11-24 08:23:16 WARNING Unusual activity detected\n2026-11-24 08:25:39 ERROR Permission denied\n2026-11-24 08:28:04 INFO user01 closed an application\n2026-11-24 08:30:22 INFO root updated the system\n2026-11-24 08:33:47 WARNING Network connection is slow\n2026-11-24 08:36:11 ERROR Database connection failed\n2026-11-24 08:39:55 INFO System monitoring started\n2026-11-24 08:42:08 WARNING Storage almost full\n2026-11-24 08:45:33 INFO user01 requested a report\n2026-11-24 08:48:19 ERROR Unauthorized access detected\n2026-11-24 08:51:40 INFO root completed maintenance" > sys_events.log
+    4  ls
+    5  grep "ERROR" sys_events.log
+    6  grep -E "root|user01" sys_events.log
+    7  grep "ERROR" sys_events.log | less
+    8  grep -E "root|user01" sys_events.log | less
+    9  head -n 5 <logfile>
+   10  clear
+   11  head -5 sys_events.log
+   12  tail -5 sys_events.log
+   13  cat sys_events.log
+   14  touch /log/confidential.txt
+   15  touch /home/forensic01/log/confidencial.txt
+   16  ls
+   17  ls -l
+   18  cd /home/forensic01/log/confidencial.txt
+   19  chmod 600 confidencial.txt
+   20  sudo chown root:root confidencial.txt
+   21  ls -l
+   22  cat confidencial.txt
+   23  sudo adduser guest1 guest2
+   24  clear
+   25  sudo adduser guest1 
+   26  sudo adduser guest2
+   27  sudo usermod -aG guest1
+   28  sudo usermod -aG sudo guest1
+   29  sudo userdel -r guest1
+   30  sudo userdel -r guest2
+   31  ls -l
+   32  ls -la
+   33  id guest1
+   34  sudo adduser guest1
+   35  sudo usermod -aG sudo guest1
+   36  sudo adduser guest2
+   37  sudo userdel -r guest2
+   38  id guest2

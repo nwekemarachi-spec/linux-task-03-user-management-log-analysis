@@ -1,0 +1,67 @@
+LINUX TASK 03 — COMMANDS USED
+Name: ______________________________
+Date: ______________________________
+Kali/Linux version: __________________
+
+Record the exact commands you personally executed. Add or remove lines to match your actual terminal history.
+
+PART 1 — NEW USER SETUP
+sudo bash scripts/01_create_forensic_user.sh
+su - forensic01
+id
+groups
+getent passwd forensic01
+
+PART 2 — LOG CREATION AND ANALYSIS
+bash scripts/02_log_analysis.sh
+cd /home/forensic01/logs
+grep "ERROR" sys_events.log
+grep -E "root|user01" sys_events.log
+grep "ERROR" sys_events.log | tee error_report.txt | less
+head -n 5 sys_events.log
+tail -n 5 sys_events.log
+cat sys_events.log
+
+PART 3 — PERMISSIONS AND OWNERSHIP
+bash scripts/03_permissions_ownership.sh
+ls -l /home/forensic01/logs/confidential.txt
+cat /home/forensic01/logs/confidential.txt
+sudo ls -l /home/forensic01/logs/confidential.txt
+sudo cat /home/forensic01/logs/confidential.txt
+
+PART 4 — USER MANAGEMENT
+exit
+sudo bash scripts/04_user_management.sh
+id guest1
+groups guest1
+getent passwd guest2
+
+SHORT EXPLANATIONS (complete in your own words; 2–3 lines each)
+
+1. What does grep do?
+____________________________________________________________________
+____________________________________________________________________
+
+2. What does chown do?
+____________________________________________________________________
+____________________________________________________________________
+
+3. What does usermod do?
+____________________________________________________________________
+____________________________________________________________________
+
+4. What did you observe when forensic01 tried to read confidential.txt after
+   its ownership was changed to root?
+____________________________________________________________________
+____________________________________________________________________
+____________________________________________________________________
+
+EVIDENCE CHECK
+[ ] Screenshot of forensic01 account and sudo group
+[ ] Screenshot of log ERROR and root/user01 filtering
+[ ] Screenshot of head, tail, full log, and error_report.txt
+[ ] Screenshot of confidential.txt permissions and root ownership
+[ ] Screenshot showing the access test as forensic01
+[ ] Screenshot of guest1 sudo membership and guest2 removal
+
+Note: The commands above are a guide. Only claim commands and results you actually performed.
